@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #a5b4fc;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    height: 270px;
+    margin: 0 auto;
+    background-color: #2d3748;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.controls {
+    padding: 10px;
+    background-color: #334155;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #1e40af;
+}
+
+.toggle-btn.stop {
+    background-color: #ef4444;
+}
+
+.toggle-btn.stop:hover {
+    background-color: #b91c1c;
+}
+
+select {
+    padding: 6px 12px;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+select:hover,
+select:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+}
+
+label {
+    color: #94a3b8;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+#status {
+    /* margin: 10px 0; */
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    /* min-height: 20px; */
+}
+
+.disk {
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    background-color: #3b82f6;
+    border-radius: 6px;
+    height: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pole {
+    position: absolute;
+    background-color:rgb(173, 72, 0);
+    border-radius: 4px 4px 0 0;
+}
+
+.base {
+    position: absolute;
+    background-color: rgb(173, 72, 0);
+    border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    #content {
+        height: 300px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    .controls {
+        gap: 0.5rem;
+        padding: 8px;
+    }
+    .toggle-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+    }
+    select {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}
